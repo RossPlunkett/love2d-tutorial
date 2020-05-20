@@ -94,7 +94,7 @@ end
 
 --return the instantaneous state of the requested button for the given joystick
 function GPM:button(joyId, button)
-    local stick = self.connected_sticks[joyid]
+    local stick = self.connected_sticks[joyId]
     if self.is_connected[joyId] == nil or self.is_connected[joyId] == false then return false end
 
     local is_down = stick:isGamepadDown(button)
