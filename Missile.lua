@@ -37,13 +37,13 @@ end
 --Sets the target object
 ---
 function M:target(object)
-    target_transform = object
+    self.target_transform = object
 end
 
 function M:update(dt)
 
-    if target_transform ~= nil then
-        local missile_to_target = Vector2.sub(target_transform:VectorPos(), self.transform:VectorPos())
+    if self.target_transform ~= nil then
+        local missile_to_target = Vector2.sub(self.target_transform:VectorPos(), self.transform:VectorPos())
         missile_to_target:unit()
         --print(missile_to_target.x .. " " .. missile_to_target.y )
 
